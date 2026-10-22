@@ -1,0 +1,203 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  padding: 28px 20px;
+  background: white;
+  border-right: 1px solid #e2e8e5;
+}
+
+.sidebar h1 {
+  margin: 0 0 32px;
+  color: #176b54;
+  font-size: 24px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar button {
+  padding: 14px 16px;
+  text-align: left;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #52675f;
+  cursor: pointer;
+}
+
+.sidebar button:hover,
+.sidebar button.active {
+  background: #eaf4ef;
+  color: #176b54;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 40px;
+}
+
+.subtitle,
+.summary-card p,
+.content-panel p,
+.demo-label {
+  color: #718078;
+  line-height: 1.5;
+}
+
+.subtitle {
+  margin: 0 0 8px;
+}
+
+header h2 {
+  margin: 0 0 24px;
+  font-size: 30px;
+}
+
+.demo-label {
+  font-size: 12px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.summary-card,
+.content-panel {
+  padding: 24px;
+  background: white;
+  border: 1px solid #e2e8e5;
+  border-radius: 14px;
+}
+
+.summary-card h3 {
+  margin: 0 0 18px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.summary-card strong {
+  font-size: 30px;
+}
+
+.summary-card p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+    border-right: none;
+    border-bottom: 1px solid #e2e8e5;
+  }
+
+  .sidebar h1 {
+    margin-bottom: 20px;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sidebar button {
+    padding: 10px 12px;
+  }
+
+  .main-content {
+    padding: 24px 16px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.borrowers-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.borrowers-table th,
+.borrowers-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8e5;
+}
+
+.borrowers-table th {
+  color: #718078;
+  font-size: 13px;
+  background: #f8faf9;
+}
+
+.borrower-form {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 220px;
+}
+
+.form-field label {
+  font-size: 14px;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccd9d2;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.form-field input:focus {
+  outline: 2px solid #83bca7;
+  outline-offset: 2px;
+}
+
+.primary-button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #176b54;
+  color: white;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background: #10533f;
+}
+
+.form-error {
+  flex-basis: 100%;
+  margin: 0;
+  color: #b42318;
+}
